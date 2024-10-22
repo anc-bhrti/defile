@@ -1,7 +1,7 @@
 import React from 'react';
 import { PhotographIcon, DocumentTextIcon, VideoCameraIcon, MusicNoteIcon, SearchIcon, ExternalLinkIcon, DotsVerticalIcon } from '@heroicons/react/outline';
 
-const MainContent = () => {
+const Home = () => {
   const categories = [
     { icon: <PhotographIcon className="h-6 w-6" />, label: 'Pictures', files: '480 files', color: 'bg-purple-500' },
     { icon: <DocumentTextIcon className="h-6 w-6" />, label: 'Documents', files: '50 files', color: 'bg-teal-500' },
@@ -39,7 +39,7 @@ const MainContent = () => {
       </div>
 
       <section className="mb-12">
-        <h2 className="text-lg font-semibold mb-4">Categories</h2>
+        <h2 className="text-lg font-semibold mb-4">Explore</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {categories.map((category, index) => (
             <div
@@ -96,4 +96,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default Home;

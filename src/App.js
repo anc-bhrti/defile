@@ -1,18 +1,29 @@
 import React from 'react';
-import LeftSidebar from './components/LeftSidebar';
-import MainContent from './components/MainContent';
-import RightSidebar from './components/RightSidebar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LeftSidebar from './components/LeftSidebar.js';
+import MyFiles from './components/MyFiles.js';
+import Home from './components/Home.js';
+import Favorites from './components/Favorites.js';
+import SharedFiles from './components/SharedFiles.js';
+import UploadFiles from './components/UploadFiles.js';
 import './index.css';
 
 const App = () => {
   return (
-    <div className="flex min-h-screen bg-sky-50">
-      <LeftSidebar />
-      <div className="flex-1 flex">
-        <MainContent />
-        <RightSidebar />
+    <Router>
+      <div className="flex min-h-screen bg-sky-50">
+        <LeftSidebar />
+        <div className="flex-1 flex">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/shared-files" element={<SharedFiles />} />
+            <Route path="/my-files" element={<MyFiles />} />
+            <Route path="/upload-files" element={<UploadFiles />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 
