@@ -1,11 +1,12 @@
 import React from 'react';
+import { PhotographIcon, DocumentTextIcon, VideoCameraIcon, MusicNoteIcon, SearchIcon, ExternalLinkIcon, DotsVerticalIcon } from '@heroicons/react/outline';
 
 const MainContent = () => {
   const categories = [
-    { icon: '🖼️', label: 'Pictures', files: '480 files', color: 'bg-purple-500' },
-    { icon: '📄', label: 'Documents', files: '50 files', color: 'bg-teal-500' },
-    { icon: '🎥', label: 'Videos', files: '30 files', color: 'bg-pink-500' },
-    { icon: '🎵', label: 'Audio', files: '80 files', color: 'bg-blue-500' },
+    { icon: <PhotographIcon className="h-6 w-6" />, label: 'Pictures', files: '480 files', color: 'bg-purple-500' },
+    { icon: <DocumentTextIcon className="h-6 w-6" />, label: 'Documents', files: '50 files', color: 'bg-teal-500' },
+    { icon: <VideoCameraIcon className="h-6 w-6" />, label: 'Videos', files: '30 files', color: 'bg-pink-500' },
+    { icon: <MusicNoteIcon className="h-6 w-6" />, label: 'Audio', files: '80 files', color: 'bg-blue-500' },
   ];
 
   const folders = [
@@ -16,10 +17,10 @@ const MainContent = () => {
   ];
 
   const recentFiles = [
-    { name: 'IMG_100000', type: 'PNG file', size: '5 MB', icon: '🖼️' },
-    { name: 'Startup pitch', type: 'AU file', size: '105 MB', icon: '🎵' },
-    { name: 'Freestyle beat', type: 'MP3 file', size: '21 MB', icon: '🎵' },
-    { name: 'Work proposal', type: 'DOCX file', size: '500 kb', icon: '📄' },
+    { name: 'IMG_100000', type: 'PNG file', size: '5 MB', icon: <PhotographIcon className="h-6 w-6" /> },
+    { name: 'Startup pitch', type: 'AU file', size: '105 MB', icon: <MusicNoteIcon className="h-6 w-6" /> },
+    { name: 'Freestyle beat', type: 'MP3 file', size: '21 MB', icon: <MusicNoteIcon className="h-6 w-6" /> },
+    { name: 'Work proposal', type: 'DOCX file', size: '500 kb', icon: <DocumentTextIcon className="h-6 w-6" /> },
   ];
 
   return (
@@ -27,7 +28,7 @@ const MainContent = () => {
       <div className="mb-8">
         <div className="relative">
           <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-            🔍
+            <SearchIcon className="h-5 w-5" />
           </span>
           <input
             type="text"
@@ -84,8 +85,8 @@ const MainContent = () => {
               </div>
               <div className="flex items-center space-x-4 text-gray-400">
                 <span className="text-sm">{file.size}</span>
-                <span className="cursor-pointer hover:text-gray-600">↗️</span>
-                <span className="cursor-pointer hover:text-gray-600">⋮</span>
+                <ExternalLinkIcon className="h-5 w-5 cursor-pointer hover:text-gray-600" />
+                <DotsVerticalIcon className="h-5 w-5 cursor-pointer hover:text-gray-600" />
               </div>
             </div>
           ))}

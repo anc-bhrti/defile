@@ -1,4 +1,5 @@
 import React from 'react';
+import { UploadIcon } from '@heroicons/react/outline';
 
 const RightSidebar = () => {
   const sharedFolders = [
@@ -11,7 +12,7 @@ const RightSidebar = () => {
     <div className="w-72 p-8 border-l border-gray-200">
       <div className="mb-8">
         <button className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg py-2 px-4 flex items-center justify-center space-x-2 transition-colors duration-200">
-          <span>⬆️</span>
+          <UploadIcon className="h-5 w-5" />
           <span>Add new files</span>
         </button>
       </div>

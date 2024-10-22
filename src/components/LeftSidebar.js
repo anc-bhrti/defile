@@ -1,16 +1,17 @@
 import React from 'react';
+import { HomeIcon, UserGroupIcon, StarIcon, CloudUploadIcon, CogIcon, LogoutIcon } from '@heroicons/react/outline';
 
 const LeftSidebar = () => {
   const menuItems = [
-    { icon: '🏠', label: 'My cloud', active: true },
-    { icon: '👥', label: 'Shared files' },
-    { icon: '⭐', label: 'Favorites' },
-    { icon: '⬆️', label: 'Upload files' },
+    { icon: <HomeIcon className="h-6 w-6" />, label: 'My cloud', active: true },
+    { icon: <UserGroupIcon className="h-6 w-6" />, label: 'Shared files' },
+    { icon: <StarIcon className="h-6 w-6" />, label: 'Favorites' },
+    { icon: <CloudUploadIcon className="h-6 w-6" />, label: 'Upload files' },
   ];
 
   const bottomItems = [
-    { icon: '⚙️', label: 'Settings' },
-    { icon: '📤', label: 'Log out' },
+    { icon: <CogIcon className="h-6 w-6" />, label: 'Settings' },
+    { icon: <LogoutIcon className="h-6 w-6" />, label: 'Log out' },
   ];
 
   return (
@@ -29,7 +30,7 @@ const LeftSidebar = () => {
                   item.active ? 'bg-blue-800' : 'hover:bg-blue-800'
                 } transition-colors duration-200`}
               >
-                <span className="text-xl">{item.icon}</span>
+                <span>{item.icon}</span>
                 <span>{item.label}</span>
               </a>
             </li>
@@ -45,7 +46,7 @@ const LeftSidebar = () => {
                 href="#"
                 className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-800 transition-colors duration-200"
               >
-                <span className="text-xl">{item.icon}</span>
+                <span>{item.icon}</span>
                 <span>{item.label}</span>
               </a>
             </li>
