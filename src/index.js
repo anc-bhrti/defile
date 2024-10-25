@@ -15,7 +15,7 @@ root.render(
           name: "Example React Dapp",
           url: window.location.href,
         },
-        infuraAPIKey: process.env.INFURA_API_KEY,
+        pinataAPIKey: process.env.PINATA_API_KEY,
         // Other options.
       }}
     >
